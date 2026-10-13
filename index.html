@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anura café | Cafetería en Cancún</title>
+  <meta name="description" content="Anura café: bebidas frías y calientes, desayunos y panadería en Cancún. Consulta el menú, horarios y ubicación.">
+  <meta name="robots" content="noindex, nofollow">  <!-- remover despues del host -->
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Anura café | Cafetería en Cancún">
+  <meta property="og:description" content="Bebidas frías y calientes, desayunos y panadería de la casa en Cancún.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://anuracafe.com/img/local-1.jpg">
+  <meta property="og:locale" content="es_MX">
+
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SEO Local: Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Anura café",
+    "image": "https://anuracafe.com/img/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Kohunlich, Supermanzana 45, Manzana 2, Lote 3",
+      "addressLocality": "Cancún",
+      "addressRegion": "Quintana Roo",
+      "postalCode": "77506",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.1558,
+      "longitude": -86.8515
+    },
+    "url": "https://anuracafe.com",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "20:30"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#inicio" aria-label="Anura café, ir al inicio">
+      <img src="img/logo.png" alt="Logotipo de Anura café" width="48" height="48">
+      <span>Anura café</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="#menu">Menú</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <p class="eyebrow">Cafetería · Cancún</p>
+        <h1>Un café tranquilo,<br>hecho con calma.</h1>
+        <p class="lead">Bebidas frías y calientes, desayunos y panadería. Tu nuevo spot favorito.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Ver menú</a>
+          <a class="btn btn-ghost" href="#contacto">Cómo llegar</a>
+        </div>
+        <p class="open-status" id="open-status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- PROMO -->
+    <section class="promo" aria-label="Promoción">
+      <p><strong>Promo:</strong> 2 frappés a <strong>$99 cada uno</strong> al llevar 2.</p>
+    </section>
+
+    <!-- MENÚ -->
+    <section class="section" id="menu">
+      <div class="container">
+        <h2>Menú</h2>
+        <p class="section-intro">Bebidas, desayunos y panadería de la casa.</p>
+        <div class="demo-note" role="note">Menú demostrativo: los productos y precios son de ejemplo.</div>
+        <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="Categorías del menú"></div>
+        <div class="menu-panel" id="menu-panel" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section section-alt" id="galeria">
+      <div class="container">
+        <h2>Galería</h2>
+        <p class="section-intro">Un vistazo a nuestras bebidas y a nuestro lugar.</p>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Visítanos</h2>
+          <address>
+            Av. Kohunlich, Supermanzana 45,<br>
+            Manzana 2, Lote 3,<br>
+            77506 Cancún, Q.R.
+          </address>
+          <h3>Horarios</h3>
+          <table class="hours" id="hours">
+            <caption class="sr-only">Horarios de atención</caption>
+            <tbody>
+              <tr data-days="1,2,3,4,5"><th scope="row">Lunes a viernes</th><td>9:00 a. m. – 7:00 p. m.</td></tr>
+              <tr data-days="6"><th scope="row">Sábado</th><td>9:00 a. m. – 8:30 p. m.</td></tr>
+              <tr data-days="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+          <div class="socials">
+            <a class="btn btn-primary" href="https://instagram.com/anura_cafe" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=61566289964502" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </div>
+          <a class="map-link" href="https://maps.app.goo.gl/wrWBFS5k3N6ApPpA9" target="_blank" rel="noopener noreferrer">Abrir en Google Maps →</a>
+        </div>
+        <div class="map-wrap">
+          <!-- Mapa embebido por dirección que funciona garantizadamente -->
+          <iframe
+            title="Mapa de la ubicación de Anura café en Cancún"
+            src="https://maps.google.com/maps?q=Av.+Kohunlich,+Supermanzana+45,+Manzana+2,+Lote+3,+77506+Canc%C3%BAn,+Q.R.&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="img/logo.png" alt="" width="40" height="40">
+    <p>© <span id="year"></span> Anura café · Cancún, Quintana Roo | jaqly labs </p>
+  </footer>
+
+  <script src="menu.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
